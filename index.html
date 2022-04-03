@@ -9,56 +9,74 @@
    
 </head>
 <body>
-    <form class="js-speaker-form">
-        <label for="nam">Имя</label>
-        <input type="text"name="name" id="nam">
-        <br>
-
-        <label for="tel">Телефон</label>
-        <input type="tel"name="tel" id="tel">
-        <br>
-
-        <label for="mail">Почта</label>
-        <input type="email"name="mail" id="mail">
-        <br>
-        <div role="group">
-        <input type="checkbox" name="topic" value="html" id="html">
-        <label for="html">HTML</label>
-
-        <input type="checkbox" name="topic" value="css" id="css">
-        <label for="css">CSS</label>
-
-        <input type="checkbox" name="topic" value="js" id="js">
-        <label for="js">JS</label>
+    <form class="form js-speaker-form">
+        <div class="form-field">
+            <label for="nam" class="form-label">Имя</label>
+            <input class="form-imput" 
+            type="text"
+            name="name"
+            id="nam" 
+            placeholder="Иван Иванович">
         </div>
 
-        <div role="group">
-        <input type="radio" name="experience" value="jun" id="jun">
-        <label for="jun">Junior</label>
+        <div class="form-field">
+            <label for="tel">Телефон</label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+        <div class="form-field">
+            <label for="mail">Почта</label>
+            <input type="email" name="mail" id="mail">
+        </div>     
 
-        <input type="radio" name="experience" value="midde" id="midde">
-        <label for="midde">Midde</label>
-        
-        <input type="radio" name="experience" value="senior" id="senior">
-        <label for="senior">Senior</label>
+       
+        <div class="group" role="group">
+            <b class="group-tex">Выберете тему доклада</b>
+            <ul class="topic-options">
+                <li>
+                    <input type="checkbox" name="topic" value="html" id="html">
+                <label for="html">HTML</label></li>
+                <li>
+                    <input type="checkbox" name="topic" value="css" id="css">
+                    <label for="css">CSS</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topic" value="js" id="js">
+                <label for="js">JS</label></li>
+            </ul>      
         </div>
 
-        <label for="date">Дата доклада</label>
-       <input type="datetime-local" name="date" id="date" min="2020-04-12T10:00"
-       max="2020-04-15T17:00">
-
-        <br>
-        <label for="pdf">Загрузите копию доклада</label>
-        <input type="file" name="pdf" id="pdf">
-        <br>
-        <label for="comment">Оставить коминтарий</label>
-        <textarea name="comment" id="comment" cols="" rows="10"></textarea>
-        <br>
-        <input type="checkbox" name="polisy" id="polisy">
-        <label for="polisy">Соглашаюсь на все</label>
-
-
-        <br>
+        <div class="group" role="group">
+            <h2>уровень вашей экспертизы</h2>
+            <ul class="experince-options">
+                <li>
+                    <input type="radio" name="experience" value="jun" id="jun">
+                <label for="jun">Junior</label></li>
+                <li>
+                    <input type="radio" name="experience" value="midde" id="midde">
+                <label for="midde">Midde</label></li>
+                <li>
+                    <input type="radio" name="experience" value="senior" id="senior">
+                    <label for="senior">Senior</label>
+                </li>
+            </ul>         
+       
+        </div>
+        <div class="form-field">
+            <label for="date">Дата доклада</label>
+            <input type="datetime-local" name="date" id="date" class="date">
+       </div>
+        <div class="form-field">  
+            <label for="pdf">Загрузите копию доклада</label>
+            <input type="file" name="pdf" id="pdf">
+        </div>
+        <div class="form-field">        
+            <label for="comment">Оставить коминтарий</label>
+            <textarea class="comment" name="comment" id="comment" cols="" rows="10"></textarea>
+        </div>
+        <div class="form-field">        
+            <input type="checkbox" name="polisy" id="polisy">
+            <label for="polisy">Соглашаюсь на все</label>
+        </div>    
 
 
         <button type="submit">Оставить заявку</button>
