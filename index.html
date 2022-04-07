@@ -9,39 +9,61 @@
    
 </head>
 <body>
-    <form class="form js-speaker-form">
+    <form class="form js-speaker-form" autocomplete="off">
         <div class="form-field">
-            <label for="nam" class="form-label">Имя</label>
+            
             <input class="form-imput" 
             type="text"
             name="name"
-            id="nam" 
-            placeholder="Иван Иванович">
+            id="nam" placeholder=" "    >
+            <label for="nam" class="form-label">Имя</label>
+            <span class="icon">
+               
+            </span>
         </div>
 
         <div class="form-field">
-            <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel">
+            
+            <input class="form-imput" type="tel" name="tel" id="tel" placeholder=" ">
+            <label class="form-label" for="tel">Телефон</label>
         </div>
-        <div class="form-field">
-            <label for="mail">Почта</label>
-            <input type="email" name="mail" id="mail">
-        </div>     
+
+
+        <!-- /* третий способ без див */ -->
+        <label class="form-field" >
+            <input class="form-imput"  type="email" name="mail" placeholder=" " >
+            <span class="form-label">Почта</span>
+            <span class="icon"></span>
+           
+        </label>
+            
+           
 
        
         <div class="group" role="group">
             <b class="group-tex">Выберете тему доклада</b>
             <ul class="topic-options">
-                <li>
-                    <input type="checkbox" name="topic" value="html" id="html">
-                <label for="html">HTML</label></li>
-                <li>
-                    <input type="checkbox" name="topic" value="css" id="css">
-                    <label for="css">CSS</label>
-                </li>
-                <li>
-                    <input type="checkbox" name="topic" value="js" id="js">
-                <label for="js">JS</label></li>
+            <li>                                    <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="html">
+                    <span class="checkbox-icon"></span>
+                    <span class="label">HTML</span>
+                </label>
+            </li>
+            <li>                    
+                <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="css"> 
+                    <span class="checkbox-icon"></span>
+                    <span class="label">SS</span>
+                 </label>   
+            </li>
+            <li>                    
+                <label class="field">
+                    <input class="checkbox" type="checkbox" name="topic" value="js">
+                    <span class="checkbox-icon"></span>
+                    <span class="label">JS</span>
+
+                </label>
+            </li>
             </ul>      
         </div>
 

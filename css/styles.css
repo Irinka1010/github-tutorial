@@ -9,16 +9,20 @@ textarea {
   padding: 20px;
 }
 .form-field{
+  
+    position: relative;
+    display: block;
+
   outline: 1px solid blue;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   margin-bottom: 20px;
 }
-.form-field label{
+/* .form-field label{
   margin-bottom: 5px;
 
-}
-.form-field input{
+} */
+/* .form-field input{
   margin: 0;
   padding: 10px 20px;
   border-radius: 3px;
@@ -26,7 +30,7 @@ textarea {
   font-size: 20px;
   margin-bottom: 10px;
 
-}
+} */
 .form-field input::placeholder{
   color: tomato;
 }
@@ -67,4 +71,103 @@ textarea {
 }
 .comment{
   padding: 8px;
+}
+
+.form-label{
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  transform: translateY(-50%);
+  
+  transition: ttransform 250ms linear;
+}
+.form-imput{
+  
+  font: inherit;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  padding-left: 50px;
+}
+
+
+.icon{
+  position: absolute;
+  top: 50%;
+  left: 10px;
+
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: tomato;
+
+}
+
+
+/* первий способ */
+.form-imput:focus ~ .icon{
+  background-color: blueviolet;
+}
+.form-imput:focus+.form-label,
+.form-imput:not(:placeholder-shown)+.form-label {
+  color: red;
+  transform: translateY(-50px);
+
+}
+/* второй способ вовременный */
+.form-field:focus-within>.icon{
+  background-color: violet;
+}
+/* третий  способ без див */
+.form-field:focus-within >.form-label{
+  transform: translateY(-50px);
+}
+
+/* позиционирование чекбоксов */
+
+.checkbox {
+  /* appearance: none;
+  position: absolute; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+} 
+
+.checkbox-icon{
+  
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+ border: 2px solid #2a2a2a;
+ border-radius: 4px;
+ margin-right: 20px;
+
+}
+.checkbox:checked +.checkbox-icon{
+  background-color: blueviolet;
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-position: center;
+  border-color: blueviolet;
+
+}
+.field{
+  display: flex;
+  align-items: center;
+}
+.label{
+  transition: transform 250ms linear ;
+}
+.checkbox:checked ~ .label{
+  transform: translateX(50px);
 }
